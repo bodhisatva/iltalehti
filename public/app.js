@@ -2,6 +2,7 @@
 angular.module('app', [
     'ui.router'
   ])
+  //For configuring providers
   .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
 
@@ -9,8 +10,5 @@ angular.module('app', [
       .state('home', {
         url: '/',
         templateUrl: 'modules/core/views/home.html',
-        controller: ['$scope', function($scope) {
-        }]
-      })
-
+      });
   }]);
