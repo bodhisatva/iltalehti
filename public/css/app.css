@@ -7,6 +7,9 @@ html body {
   margin-bottom: 60px;
   /*Sticky footer rules*/
 }
+html body .title {
+  font-size: 4em;
+}
 html body .icon-cover {
   padding: 3%;
   font-size: 6em;
