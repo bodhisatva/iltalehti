@@ -11,11 +11,7 @@
 
   <link href="/styles/images/flash.png" rel="shortcut icon" type="image/x-icon">
   <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="/styles/css/general.css" rel="stylesheet">
-  <!--TODO: add one congfiguration file for css and loop them-->
-  <!--  {% for cssFile in cssFiles %}
-    <link rel="stylesheet" href="{{csFile}}">{%endfor%} -->
-
+  <link href="/css/app.css" rel="stylesheet">
   <!-- HTML5 Shim -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,21 +20,32 @@
 </head>
 
 <body ng-app="app">
+  <!--Navigation block-->
   <header data-ng-include="'/modules/core/views/header.html'"></header>
+  <!--Main content-->
   <div class="container text-center">
     <div ui-view></div>
     <span class=" glyphicon glyphicon-flash"></span>
   </div>
+  <!--Footer-->
   <footer data-ng-include="'/modules/core/views/footer.html'"></footer>
+
+  <!--Livereload script rendered -->
+  <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+  <!--jQuery-->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
   <!--Livereload script rendered -->
   <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
   <!--Angular-->
-  <!--TODO: add one congfiguration file for scripts and loop them-->
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="/app.js"></script>
-  <script src="/modules/core/controllers/header-controller.js"></script>
-
+  <!--Module controllers-->
+  <script src="/modules/core/controllers/HomeCtrl.js"></script>
+  <script src="/modules/core/services/cities.service.js"></script>
+  <!--Hamburger menu js components-->
+  <script src="/bower_components/bootstrap/js/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/transition.js"></script>
 </body>
 
 </html>
