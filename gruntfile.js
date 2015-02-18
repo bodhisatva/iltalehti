@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     clientViews: ['public/modules/**/*.html'],
     serverJS: ['gruntfile.js', 'server.js', 'app/**/**/*.js'],
     clientJS: ['public/javascript/**/*.js', 'public/*.js', 'public/modules/core/**/*.js'],
-    clientCSS: ['public/modules/core/css/*.less']
+    clientCSS: ['public/modules/core/css/*.less','public/modules/weather/css/*.less']
   };
 
   grunt.initConfig({
