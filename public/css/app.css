@@ -21,74 +21,60 @@ html body .footer {
   background-color: #f5f5f5;
 }
 
-.centered {
-  margin: 0 auto;
+.row-same-height {
+  display: table;
   max-width: 505px;
   min-width: 300px;
+  margin: 0 auto;
+}
+.row-same-height .col-xs-height {
+  display: table-cell;
+  float: none !important;
   background-color: #FF6600;
 }
-/*max. leveys 505 px, min. 300 px*/
-.container .col-xs-4 {
-  width: 35%;
+.row-same-height .col-xs-height .logo {
   margin: 0 auto;
-  padding: 0 5px;
-  color: white;
-  text-transform: uppercase;
 }
-.container .col-xs-4 .weather-today {
+.row-same-height .col-xs-height .foreca {
+  padding-left: 5%;
+}
+.row-same-height .col-middle {
+  vertical-align: middle;
+}
+.row-same-height .col-middle .weather-today {
   font-size: 1.5em;
   font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 5%;
 }
-.container .col-xs-4 .weather-today .clock {
+@media (max-width: 505px) {
+  .row-same-height .col-middle .weather-today {
+    font-size: 1em;
+  }
+}
+.row-same-height .col-middle .weather-today .clock {
   font-size: 0.6em;
   font-weight: normal;
   vertical-align: middle;
 }
-.container .col-xs-4 .temperature {
+.row-same-height .col-middle .temperature {
   font-size: 4em;
   font-weight: bold;
+  color: white;
+  text-transform: uppercase;
 }
 @media (max-width: 505px) {
-  .container .col-xs-4 {
-    width: 100%;
+  .row-same-height .col-middle .temperature {
+    font-size: 2em;
   }
 }
-.container .col-xs-4 p {
-  margin: 0;
-}
-.container .last {
-  width: 30%;
-  margin: 0 auto;
-  padding: 5%;
-  background-color: #FF8533;
+.row-same-height .last {
+  background-color: #FF983C;
+  width: 20%;
 }
 @media (max-width: 505px) {
-  .container .last {
-    width: 100%;
-  }
-}
-.container .center {
-  margin: 0 auto;
-  padding: 5%;
-}
-@media (max-width: 505px) {
-  .container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .container .center {
-    margin: 0 auto;
-    padding: 10%;
-  }
-  .container .mobile {
-    text-align: center;
-  }
-}
-@media (max-width: 596px) {
-  .container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
+  .row-same-height .icon {
+    padding: 5%;
   }
 }
