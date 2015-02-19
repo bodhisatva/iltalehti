@@ -1,22 +1,30 @@
-@mobile-width: 505px;
-.centered {
-    margin: 0 auto;
+.row-same-height {
+    display: table;
     max-width: 505px;
     min-width: 300px;
-    background-color: #FF6600;
-}
-/*max. leveys 505 px, min. 300 px*/
-
-.container {
-    .col-xs-4 {
-        width: 35%;
-        margin: 0 auto;
-        padding: 0 5px;
-        color: white;
-        text-transform: uppercase;
+    margin: 0 auto;
+    .col-xs-height {
+        display: table-cell;
+        float: none !important;
+        background-color: #FF6600;
+        .logo {
+            margin: 0 auto;
+        }
+        .foreca {
+            padding-left: 5%;
+        }
+    }
+    .col-middle {
+        vertical-align: middle;
         .weather-today {
             font-size: 1.5em;
             font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            padding-top: 5%;
+            @media(max-width: 505px) {
+                font-size: 1em;
+            }
             .clock {
                 font-size: 0.6em;
                 font-weight: normal;
@@ -26,42 +34,20 @@
         .temperature {
             font-size: 4em;
             font-weight: bold;
-        }
-        @media(max-width:505px) {
-            width: 100%;
-        }
-        p {
-            margin: 0;
+            color: white;
+            text-transform: uppercase;
+            @media(max-width: 505px) {
+                font-size: 2em;
+            }
         }
     }
     .last {
-        width: 30%;
-        margin: 0 auto;
-        padding: 5%;
-        background-color: #FF8533;
+        background-color: #FF983C;
+        width: 20%;
+    }
+    .icon {
         @media(max-width: 505px) {
-            width: 100%;
+            padding: 5%;
         }
-    }
-    .center {
-        margin: 0 auto;
-        padding: 5%;
-    }
-    @media(max-width:505px) {
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
-        .center {
-            margin: 0 auto;
-            padding: 10%;
-        }
-        .mobile {
-            text-align: center;
-        }
-    }
-    @media(max-width:596px) {
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
     }
 }
