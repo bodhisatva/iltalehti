@@ -22,29 +22,73 @@ html body .footer {
 }
 
 .centered {
-  margin: auto;
+  margin: 0 auto;
   max-width: 505px;
   min-width: 300px;
   background-color: #FF6600;
 }
 /*max. leveys 505 px, min. 300 px*/
-.col-xs-3 {
+.container .col-xs-4 {
   width: 35%;
-  margin: 0;
-  padding: 0 0 0 0;
+  margin: 0 auto;
+  padding: 0 5px;
   color: white;
   text-transform: uppercase;
 }
-.col-xs-3 .weather-info {
+.container .col-xs-4 .weather-today {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.container .col-xs-4 .weather-today .clock {
+  font-size: 0.6em;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.container .col-xs-4 .temperature {
+  font-size: 4em;
+  font-weight: bold;
+}
+@media (max-width: 505px) {
+  .container .col-xs-4 {
+    width: 100%;
+  }
+}
+.container .col-xs-4 p {
   margin: 0;
 }
-.col-xs-3 h3 {
-  margin: 5px 0;
-}
-.last {
+.container .last {
   width: 30%;
-  margin: 0;
-  padding: 0 0 0 0;
-  background-color: #FF9147;
-  height: 100%;
+  margin: 0 auto;
+  padding: 5%;
+  background-color: #FF8533;
+}
+@media (max-width: 505px) {
+  .container .last {
+    width: 100%;
+  }
+}
+.container .center {
+  margin: 0 auto;
+  padding: 5%;
+}
+@media (max-width: 505px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .container .center {
+    margin: 0 auto;
+    padding: 10%;
+  }
+  .container .mobile {
+    text-align: center;
+  }
+}
+@media (max-width: 596px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
