@@ -1,0 +1,54 @@
+{
+   "oulu" : [
+      {
+         "sky" : "sunny",
+         "time" : "08:00",
+         "temperature" : "-8"
+      },
+      {
+         "sky" : "partly cloudy",
+         "time" : "15:00",
+         "temperature" : "-2"
+      },
+      {
+         "sky" : "sunny",
+         "time" : "20:00",
+         "temperature" : "-10"
+      }
+   ],
+   "helsinki" : [
+      {
+         "sky" : "cloudy",
+         "time" : "08:00",
+         "temperature" : "+5"
+      },
+      {
+         "sky" : "partly cloudy",
+         "time" : "15:00",
+         "temperature" : "+15"
+      },
+      {
+         "sky" : "cloudy",
+         "time" : "20:00",
+         "temperature" : "+8"
+      }
+   ],
+   "tampere" : [
+      {
+         "sky" : "cloudy",
+         "time" : "08:00",
+         "temperature" : "+6"
+      },
+      {
+         "sky" : "sunny",
+         "time" : "15:00",
+         "temperature" : "0"
+      },
+      {
+         "sky" : "partly cloudy",
+         "time" : "20:00",
+         "temperature" : "-1"
+      }
+   ]
+}
+
