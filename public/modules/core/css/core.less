@@ -4,13 +4,19 @@ html {
   body {
     /* Margin bottom by footer height */
     
+    .jumbotron {
+      background-color: #F8F7F8;  
+    }
     .title {
-      font-size: 4em;
+      font-size: 5em;
       text-transform: uppercase;
       text-align: center;
+      @media(max-width: 505px) {
+        font-size: 3em;
+      }
     }
     /*Sticky footer rules*/
-
+    
     .footer {
       padding-top: 40px;
       position: absolute;

@@ -15,12 +15,11 @@ angular.module('app').controller('WeatherCtrl', ['$scope', 'weatherServices', fu
     }
 
     $scope.cities = cities;
-    $scope.weathersAll = weathersAll //json object per city
+    $scope.weathersAll = weathersAll;
     $scope.myInterval = 2500;
     $scope.slides = weathersAll;
 
-
-    console.log('weathersAll' +$scope.weathersAll);
+    console.log($scope.weathersAll.key);
     console.log($scope.cities);
   })
 }]);
