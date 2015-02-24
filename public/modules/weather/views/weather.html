@@ -2,26 +2,23 @@
   <div class="row-same-height">
     <carousel interval="myInterval">
       <slide data-ng-repeat="weathers in weathersAll">
-        <div data-ng-init="city = cities">
-          <div data-ng-repeat="weather in weathers" active="weather.active" data-ng-show="$first">
-            <div class="col-xs-3 col-xs-height col-middle"> <img class="img-responsive center icon" data-ng-src="/resources/images/{{weather.sky}}.png" alt="fonecta">
+        <div data-ng-repeat="weather in weathers" active="weather.active" data-ng-show="$first">
+          <div class="col-xs-3 col-xs-height col-middle"> <img class="img-responsive center icon" data-ng-src="/resources/images/{{weather.sky}}.png" alt="{{weather.sky}}">
+          </div>
+          <div class="col-xs-3 col-xs-height col-middle">
+            <div class="row">
+              <p class="weather-today">Sää tänään
+                <br />{{cities[0]}}
+                <span class="clock">{{weather.time}}</span>
+              </p>
             </div>
-            <div class="col-xs-3 col-xs-height col-middle">
-              <div class="row">
-                <p class="weather-today">Sää tänään
-                  <br/> {{city[0]}}
-                  <span class="clock">{{weather.time}}</span>
-                </p>
-              </div>
-              <div class="row">
-                <p><span class="temperature">{{weather.temperature}}</span>
-                </p>
-              </div>
-            </div>
-            <div class="col-xs-3 col-xs-height col-middle last"> <img class="img-responsive center" src="/resources/images/foreca.png" alt="fonecta">
+            <div class="row">
+              <p><span class="temperature">{{weather.temperature}}°</span>
+              </p>
             </div>
           </div>
-          <!--  -->
+          <div class="col-xs-3 col-xs-height col-middle last"> <img class="img-responsive center" src="/resources/images/foreca.png" alt="foreca">
+          </div>
         </div>
       </slide>
     </carousel>

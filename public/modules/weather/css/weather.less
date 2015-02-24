@@ -1,53 +1,57 @@
 .row-same-height {
-    display: table;
-    max-width: 505px;
-    min-width: 300px;
-    margin: 0 auto;
-    .col-xs-height {
-        display: table-cell;
-        float: none !important;
-        background-color: #FF6600;
-        .logo {
-            margin: 0 auto;
-        }
-        .foreca {
-            padding-left: 5%;
-        }
+  display: table;
+  padding: 3% 0;
+  max-width: 505px;
+  min-width: 300px;
+  margin: 0 auto;
+  .col-xs-height {
+    display: table-cell;
+    float: none !important;
+    background-color: #FF6600;
+    .logo {
+      margin: 0 auto;
     }
-    .col-middle {
+    .foreca {
+      padding-left: 5%;
+    }
+  }
+  .col-middle {
+    vertical-align: middle;
+    .weather-today {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      padding-top: 5%;
+      @media(max-width: 505px) {
+        font-size: 1em;
+      }
+      .clock {
+        font-size: 0.6em;
+        font-weight: normal;
         vertical-align: middle;
-        .weather-today {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: white;
-            text-transform: uppercase;
-            padding-top: 5%;
-            @media(max-width: 505px) {
-                font-size: 1em;
-            }
-            .clock {
-                font-size: 0.6em;
-                font-weight: normal;
-                vertical-align: middle;
-            }
-        }
-        .temperature {
-            font-size: 4em;
-            font-weight: bold;
-            color: white;
-            text-transform: uppercase;
-            @media(max-width: 505px) {
-                font-size: 2em;
-            }
-        }
+      }
     }
-    .last {
-        background-color: #FF983C;
-        width: 20%;
+    .temperature {
+      font-size: 4em;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      @media(max-width: 505px) {
+        font-size: 2em;
+      }
     }
-    .icon {
-        @media(max-width: 505px) {
-            padding: 5%;
-        }
+  }
+  .last {
+    background-color: #FF983C;
+    width: 20%;
+  }
+  .icon {
+    @media(max-width: 505px) {
+      padding: 5%;
     }
+  }
+  .carousel-indicators {
+    display: none;
+  }
 }
