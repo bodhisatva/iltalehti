@@ -1,11 +1,26 @@
 'use strict'
 
-angular.module('app').controller('WeatherCtrl',['$scope', 'weatherServices', function($scope,weatherServices) {
-    console.log('WeatherCtrl: ' +weatherServices);
-    var promise = weatherServices.getData();
+angular.module('app').controller('WeatherCtrl', ['$scope', 'weatherServices', function($scope, weatherServices) {
+  console.log('WeatherCtrl: ' + weatherServices);
+  var promise = weatherServices.getData();
 
-    promise.then(function(data) {
-        $scope.weatherInformation = data.data; //json object per city
-        console.log($scope.weatherInformation);
-    })
+  promise.then(function(data) {
+    var weathersAll = data.data,
+      cities = [],
+      key;
+
+    for (key in weathersAll) {
+      cities.push(key);
+      cities.sort();
+    }
+
+    $scope.cities = cities;
+    $scope.weathersAll = weathersAll //json object per city
+    $scope.myInterval = 2500;
+    $scope.slides = weathersAll;
+
+
+    console.log('weathersAll' +$scope.weathersAll);
+    console.log($scope.cities);
+  })
 }]);

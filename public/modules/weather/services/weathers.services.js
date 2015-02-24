@@ -11,5 +11,4 @@
     this.getData = function() {
       return  deferred.promise;
     }
-    console.log('weathers.weatherServices');
   });
